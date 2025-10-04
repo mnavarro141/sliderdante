@@ -5,24 +5,39 @@
 <title>Slider texto BLADE</title>
 <style>
 *{box-sizing:border-box}
-body{background:#000; color:#fff; font-family:Arial, Helvetica, sans-serif; margin:0; padding:20px}
-.slider{width:800px; margin:40px auto; position:relative; overflow:hidden; border-radius:8px;}
-.slides{display:flex; transition:transform .5s ease; will-change:transform}
-.slide{min-width:800px; padding:24px; height:320px; background:rgba(0,0,0,0.6); color:#fff; text-align:justify; position:relative}
+body{background:#1F0002; color:#fff; font-family:Arial, Helvetica, sans-serif; margin:0; padding:20px}
+.slider{
+  width:800px; 
+  margin:40px auto; 
+  position:relative; 
+  overflow:hidden; 
+  border-radius:8px;
+}
+.slides{
+  display:flex; 
+  transition:transform .5s ease; 
+  will-change:transform
+}
+.slide{
+  min-width:800px; 
+  padding:24px; 
+  height:320px; 
+  color:#fff; 
+  text-align:justify; 
+  position:relative
+}
 .arrow{
   position:absolute; 
   top:50%; 
   transform:translateY(-50%); 
-  font-size:48px;          /* tamaño más grande */
-  font-weight:bold;        /* más gruesa la flecha */
+  font-size:48px;        /* flechas más grandes */
+  font-weight:bold; 
   color:#B21919; 
   text-decoration:none; 
   cursor:pointer; 
   z-index:20; 
   user-select:none; 
-  background:rgba(0,0,0,0.4); 
-  padding:12px 20px;       /* área más ancha y cómoda */
-  border-radius:50%;
+  padding:12px 20px;     /* área de clic más cómoda */
 }
 .arrow.left{left:12px}
 .arrow.right{right:12px}
