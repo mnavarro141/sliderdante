@@ -1,111 +1,97 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slider BLADE</title>
+<meta charset="utf-8">
+<title>Slider texto BLADE</title>
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    background: transparent;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 11px;
-    line-height: 1.5;
-    color: white;
-    overflow: hidden;
-    text-align: justify;
-  }
-
-  .slider {
-    position: relative;
-    width: 760px;
-    height: 275px;
-    overflow: hidden;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .slides {
-    display: flex;
-    width: 300%;
-    height: 100%;
-    transition: transform 0.6s ease, filter 0.4s ease;
-  }
-
-  .slide {
-    flex: 0 0 100%;
-    padding: 20px 40px;
-    text-align: justify;
-    box-sizing: border-box;
-    filter: blur(0);
-  }
-
-  .slide.active {
-    filter: blur(0);
-  }
-
-  .fade-blur {
-    filter: blur(8px);
-    transition: filter 0.4s ease;
-  }
-
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 28px;
-    color: white;
-    cursor: pointer;
-    user-select: none;
-    padding: 10px;
-    z-index: 10;
-    transition: color 0.3s ease;
-    filter: none !important;
-  }
-
-  .arrow:hover {
-    color: #d3d3d3;
-  }
-
-  .prev { left: 15px; }
-  .next { right: 15px; }
+*{box-sizing:border-box}
+body{
+  background:transparent;
+  color:#fff;
+  font-family:Verdana, Geneva, sans-serif;
+  font-size:11px;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+.slider{
+  width:760px;
+  margin:0 auto;
+  position:relative;
+  overflow:hidden;
+  border-radius:8px;
+  text-align:justify;
+}
+.slides{
+  display:flex;
+  transition:transform .6s ease, filter .4s ease;
+  will-change:transform, filter;
+}
+.slide{
+  min-width:760px;
+  padding:20px 50px;
+  height:270px;
+  text-align:justify;
+  position:relative;
+  filter:blur(0);
+}
+.fade-blur{filter:blur(6px);transition:filter .4s ease}
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:48px;
+  font-weight:bold;
+  color:#B21919;
+  text-decoration:none;
+  cursor:pointer;
+  z-index:20;
+  user-select:none;
+  padding:12px 20px;
+  transition:color .3s ease;
+  filter:none !important;
+}
+.arrow:hover{color:#e83b3b}
+.arrow.left{left:12px}
+.arrow.right{right:12px}
 </style>
 </head>
 <body>
-  <div class="slider">
-    <div class="slides" id="slides">
-      <div class="slide active">
-        <b>Organización BLADE</b><br><br>
-        BLADE es una organización de mercenarios nacida en el West Blue bajo el control de las mafias conocidas como Las Cinco Familias del Oeste. Tras años de sometimiento, su líder, Hellgate Dante, encabezó una rebelión que marcó el inicio de la expansión del grupo, ahora independiente y en constante crecimiento. Sus miembros operan por contrato, especializándose en misiones de alto riesgo, espionaje, sabotaje y combate.
-      </div>
-      <div class="slide">
-        Pese a su reputación como asesinos y traficantes, BLADE actúa bajo una estricta filosofía: la cacería de los Usuarios de Akuma no Mi, a quienes denominan “demonios”. Los mercenarios creen que estos poderes representan un desequilibrio peligroso para el mundo. Muchos de ellos fueron víctimas de usuarios de frutas del diablo, lo que cimentó el propósito común de erradicarlos o someterlos.
-      </div>
-      <div class="slide">
-        En la actualidad, la organización mantiene una estructura jerárquica sólida y operaciones secretas a lo largo del Grand Line. Su meta va más allá del beneficio económico: buscan dominar el conocimiento sobre las Akuma no Mi y hallar un modo de destruirlas. Su nombre comienza a extenderse entre las sombras como el de una fuerza que se alza para reescribir las reglas del poder.
-      </div>
+<div class="slider" id="slider">
+  <div class="slides" id="slides">
+
+    <div class="slide">
+      La Organización BLADE es un grupo de mercenarios que opera en el Grand Line. Se trata de una milicia especializada en misiones por contrato: desde la intervención en conflictos bélicos hasta el espionaje o asesinato. Fue fundada en el West Blue como grupo criminal al servicio de Las Cinco Familias del Oeste. Un par de años después se volvieron lo bastante fuertes y numerosos como para deshacerse del Capo que controlaba Isla Mallet, una pequeña ínsula del Mar de Las Camp donde BLADE tenía su sede. Tras aquello, y debido a las represalias del resto de mafias con las que lidiaban, abandonaron la isla para seguir creciendo como organización y extender su fama.
     </div>
 
-    <div class="arrow prev" onclick="moveSlide(-1)">❮</div>
-    <div class="arrow next" onclick="moveSlide(1)">❯</div>
+    <div class="slide">
+      Los años en el West Blue les valieron para ganar cierta infamia entre las mafias y un puñado de contactos en los suburbios. Aún así no rechazan ningún cliente, relacionado o no con el bajo mundo, pues buscan convertirse en el grupo armado más grande e influyente del planeta. Mientras alguien pueda pagar su precio en dinero, recursos o información, los mercenarios están dispuestos a cumplir. Sin embargo, son bastantes selectivos y no suelen asumir riesgos innecesarios que comprometan el propósito real de la organización.
+    </div>
+
+    <div class="slide">
+      Salvo con sus clientes más selectos, procuran esconder su verdadera actividad: la cacería de Akuma no Mi y sus Usuarios, a quienes llaman demonios. Lo cierto es que, pese a tener orígenes e historias muy diversas, todos los miembros de BLADE comparten la experiencia de haber sido víctimas de estos poderes alguna vez. Y esa es la causa que los une a todos, motivados por el rencor que guardan o la determinación de doblegarlos algún día.
+    </div>
+
   </div>
+  <a class="arrow left" id="prev" aria-label="prev">‹</a>
+  <a class="arrow right" id="next" aria-label="next">›</a>
+</div>
 
-  <script>
-    let index = 0;
-    const slides = document.querySelectorAll('.slide');
-    const slidesContainer = document.getElementById('slides');
-
-    function moveSlide(direction) {
-      slides[index].classList.add('fade-blur');
-      index = (index + direction + slides.length) % slides.length;
-      slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-      setTimeout(() => {
-        slides.forEach(s => s.classList.remove('fade-blur'));
-      }, 300);
-    }
-  </script>
+<script>
+(function(){
+  var slides=document.getElementById('slides');
+  var total=slides.children.length;
+  var idx=0;
+  function go(i){
+    slides.classList.add('fade-blur');
+    idx=(i+total)%total;
+    slides.style.transform='translateX('+(-idx*100)+'%)';
+    setTimeout(()=>slides.classList.remove('fade-blur'),300);
+  }
+  document.getElementById('next').addEventListener('click',()=>go(idx+1));
+  document.getElementById('prev').addEventListener('click',()=>go(idx-1));
+  go(0);
+})();
+</script>
 </body>
 </html>
