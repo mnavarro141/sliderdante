@@ -3,119 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slider Dante</title>
+<title>Slider BLADE</title>
 <style>
-body {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-  font-family: 'Times New Roman', serif;
-  color: #fff;
-  overflow: hidden;
-}
+  body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family: Verdana, sans-serif;
+    font-size: 12pt;
+    line-height: 1.6;
+    color: white;
+    overflow: hidden;
+  }
 
-.slider-container {
-  position: relative;
-  width: 760px;
-  height: 270px;
-  margin: 0 auto;
-  overflow: hidden;
-  background: transparent;
-}
+  .slider {
+    position: relative;
+    width: 760px;
+    height: 275px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.slides {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s ease;
-}
+  .slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.6s ease, filter 0.4s ease;
+  }
 
-.slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  text-align: justify;
-  padding: 0 35px;
-}
+  .slide {
+    flex: 0 0 100%;
+    padding: 20px 40px;
+    text-align: justify;
+    box-sizing: border-box;
+    filter: blur(0);
+  }
 
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  color: #b50000;
-  cursor: pointer;
-  user-select: none;
-  z-index: 10;
-  transition: opacity 0.3s ease, filter 0.3s ease;
-}
+  .slide.active {
+    filter: blur(0);
+  }
 
-.arrow:hover {
-  opacity: 0.8;
-  filter: blur(1px);
-}
+  .fade-blur {
+    filter: blur(8px);
+    transition: filter 0.4s ease;
+  }
 
-.arrow.left { left: 10px; }
-.arrow.right { right: 10px; }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+  }
 
-.slider-container.blur {
-  filter: blur(4px);
-  transition: filter 0.3s ease;
-}
+  .arrow:hover {
+    opacity: 0.7;
+  }
+
+  .prev { left: 15px; }
+  .next { right: 15px; }
+
 </style>
 </head>
 <body>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide active">
+        <b>Organización BLADE</b><br><br>
+        BLADE es una organización de mercenarios nacida en el West Blue bajo el control de las mafias conocidas como Las Cinco Familias del Oeste. Tras años de sometimiento, su líder, Hellgate Dante, encabezó una rebelión que marcó el inicio de la expansión del grupo, ahora independiente y en constante crecimiento. Sus miembros operan por contrato, especializándose en misiones de alto riesgo, espionaje, sabotaje y combate.
+      </div>
+      <div class="slide">
+        Pese a su reputación como asesinos y traficantes, BLADE actúa bajo una estricta filosofía: la cacería de los Usuarios de Akuma no Mi, a quienes denominan “demonios”. Los mercenarios creen que estos poderes representan un desequilibrio peligroso para el mundo. Muchos de ellos fueron víctimas de usuarios de frutas del diablo, lo que cimentó el propósito común de erradicarlos o someterlos.
+      </div>
+      <div class="slide">
+        En la actualidad, la organización mantiene una estructura jerárquica sólida y operaciones secretas a lo largo del Grand Line. Su meta va más allá del beneficio económico: buscan dominar el conocimiento sobre las Akuma no Mi y hallar un modo de destruirlas. Su nombre comienza a extenderse entre las sombras como el de una fuerza que se alza para reescribir las reglas del poder.
+      </div>
+    </div>
 
-<div class="slider-container" id="slider">
-  <div class="arrow left" onclick="prevSlide()">&#10094;</div>
-  <div class="slides" id="slides">
-    <div class="slide">
-      La <b>Organización BLADE</b> es un grupo de mercenarios que opera en el Grand Line. Se trata de una milicia especializada en misiones por contrato: desde la intervención en conflictos bélicos hasta el espionaje o asesinato. Fue fundada en el West Blue como grupo criminal al servicio de <i>Las Cinco Familias del Oeste</i>. Un par de años después se volvieron lo bastante fuertes y numerosos como para deshacerse del Capo que controlaba Isla Mallet, una pequeña ínsula del Mar de Las Camp donde BLADE tenía su sede. Tras aquello, y debido a las represalias del resto de mafias con las que lidiaban, abandonaron la isla para seguir creciendo como organización y extender su fama.
-    </div>
-    <div class="slide">
-      Los años en el West Blue les valieron para ganar cierta infamia entre las mafias y un puñado de contactos en los suburbios. Aun así no rechazan ningún cliente, relacionado o no con el bajo mundo, pues buscan convertirse en el grupo armado más grande e influyente del planeta. Mientras alguien pueda pagar su precio en dinero, recursos o información, los mercenarios están dispuestos a cumplir. Sin embargo, son bastantes selectivos y no suelen asumir riesgos innecesarios que comprometan el propósito real de la organización.
-    </div>
-    <div class="slide">
-      Salvo con sus clientes más selectos, procuran esconder su verdadera actividad: la cacería de Akuma no Mi y sus Usuarios, a quienes llaman <i>demonios</i>. Lo cierto es que, pese a tener orígenes e historias muy diversas, todos los miembros de BLADE comparten la experiencia de haber sido víctimas de estos poderes alguna vez. Y esa es la causa que los une a todos, motivados por el rencor que guardan o la determinación de doblegarlos algún día.
-    </div>
-    <div class="slide">
-      Además de su cruzada contra los <i>demonios</i>, llevan en paralelo una exhaustiva investigación sobre las Akuma no Mi. Buscan y recolectan todas las frutas posibles, no sólo para incautarlas y alejarlas de manos que ellos consideran equivocadas, sino especialmente para desentrañar sus secretos y encontrar el método con el que destruirlas algún día. En pro de esta misma investigación suelen capturar algunos objetivos, con quienes experimentan después para su estudio. La mayoría terminan sin vida; otros, con más suerte, acaban entre las filas de los mercenarios, utilizados como armas.
-    </div>
-    <div class="slide">
-      Tienen una ética utilitarista y no dudan en valerse de cuanto esté a su alcance con tal de asegurar el éxito de sus metas, sin importar el precio a pagar ni las consecuencias. Este extremismo conlleva que no rechacen incluso el consumo de las mismas frutas. Aunque esto pudiera parecer una contradicción, la verdad es que para cualquiera de sus integrantes es un acto heroico dada la existencia de su <i>Ley Fundamental</i>. Esta regla dicta que cualquier mercenario consumidor de una fruta del diablo acepta ser ejecutado cuando su labor o la misión de BLADE concluyan.
-    </div>
+    <div class="arrow prev" onclick="moveSlide(-1)">❮</div>
+    <div class="arrow next" onclick="moveSlide(1)">❯</div>
   </div>
-  <div class="arrow right" onclick="nextSlide()">&#10095;</div>
-</div>
 
-<script>
-let currentIndex = 0;
-const slides = document.getElementById('slides');
-const totalSlides = document.querySelectorAll('.slide').length;
-const slider = document.getElementById('slider');
+  <script>
+    let index = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slidesContainer = document.getElementById('slides');
 
-function showSlide(index) {
-  if (index >= totalSlides) currentIndex = 0;
-  else if (index < 0) currentIndex = totalSlides - 1;
-  else currentIndex = index;
-  slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-function nextSlide() {
-  slider.classList.add('blur');
-  setTimeout(() => {
-    showSlide(currentIndex + 1);
-    slider.classList.remove('blur');
-  }, 200);
-}
-
-function prevSlide() {
-  slider.classList.add('blur');
-  setTimeout(() => {
-    showSlide(currentIndex - 1);
-    slider.classList.remove('blur');
-  }, 200);
-}
-</script>
-
+    function moveSlide(direction) {
+      slides[index].classList.add('fade-blur');
+      index = (index + direction + slides.length) % slides.length;
+      slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+      setTimeout(() => {
+        slides.forEach(s => s.classList.remove('fade-blur'));
+      }, 300);
+    }
+  </script>
 </body>
 </html>
