@@ -6,65 +6,50 @@
 <style>
 *{box-sizing:border-box}
 body{
-  background:transparent;      
-  color:#fff; 
-  font-family:Verdana, Geneva, sans-serif;  
-  font-size:9pt;               /* tamaño ajustado a 9pt */
-  margin:0; 
-  padding:0;
+  background:transparent;              /* fondo completamente transparente */
+  color:#F8F8F8;                       /* blanco suave */
+  font-family:Verdana, Geneva, sans-serif;
+  font-size:11px;                      /* tamaño ajustado al ejemplo visual */
+  line-height:1.4;                     /* espaciado de línea más compacto */
+  margin:0;
+  padding:20px;
 }
 .slider{
-  width:800px; 
-  max-width:95%;          
-  margin:0 auto; 
-  position:relative; 
-  overflow:hidden; 
+  width:800px;
+  margin:40px auto;
+  position:relative;
+  overflow:hidden;
   border-radius:8px;
-  background:transparent;
 }
 .slides{
-  display:flex; 
-  transition:transform .5s ease; 
+  display:flex;
+  transition:transform .5s ease;
   will-change:transform;
 }
 .slide{
-  min-width:100%; 
-  padding:40px 24px; 
-  height:auto; 
-  color:inherit; 
-  text-align:justify; 
-  display:flex; 
-  align-items:center; 
-  justify-content:center;
-  background:transparent;
-}
-.slide-content{
-  max-width:85%;           
-  line-height:1.6;
+  min-width:800px;
+  max-width:760px;                     /* evita que el texto se extienda demasiado */
+  margin:0 auto;
+  padding:20px;
+  text-align:justify;
+  height:auto;
+  position:relative;
 }
 .arrow{
-  position:absolute; 
-  top:50%; 
-  transform:translateY(-50%); 
-  font-size:48px;        
-  font-weight:bold; 
-  color:#B21919; 
-  text-decoration:none; 
-  cursor:pointer; 
-  z-index:20; 
-  user-select:none; 
-  padding:12px 20px;     
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:48px;
+  font-weight:bold;
+  color:#B21919;
+  text-decoration:none;
+  cursor:pointer;
+  z-index:20;
+  user-select:none;
+  padding:12px 20px;
 }
-.arrow.left{left:-10px;}
-.arrow.right{right:-10px;}
-.arrow:hover{color:#ff3b3b;}
-
-/* Responsive */
-@media (max-width:600px){
-  body{font-size:8pt;}
-  .slide-content{max-width:95%;}
-  .arrow{font-size:36px; padding:8px 12px;}
-}
+.arrow.left{left:12px}
+.arrow.right{right:12px}
 </style>
 </head>
 <body>
@@ -72,37 +57,23 @@ body{
   <div class="slides" id="slides">
 
     <div class="slide">
-      <div class="slide-content">
-        La Organización BLADE es un grupo de mercenarios que opera en el Grand Line. Se trata de una milicia especializada en misiones por contrato: desde la intervención en conflictos bélicos hasta el espionaje o asesinato. Fue fundada en el West Blue como grupo criminal al servicio de Las Cinco Familias del Oeste.<br><br>
-        Un par de años después se volvieron lo bastante fuertes y numerosos como para deshacerse del Capo que controlaba Isla Mallet, una pequeña ínsula del Mar de Las Camp donde BLADE tenía su sede. Tras aquello, y debido a las represalias del resto de mafias con las que lidiaban, abandonaron la isla para seguir creciendo como organización y extender su fama.
-      </div>
+      La Organización BLADE es un grupo de mercenarios que opera en el Grand Line. Se trata de una milicia especializada en misiones por contrato: desde la intervención en conflictos bélicos hasta el espionaje o asesinato. Fue fundada en el West Blue como grupo criminal al servicio de Las Cinco Familias del Oeste. Un par de años después se volvieron lo bastante fuertes y numerosos como para deshacerse del Capo que controlaba Isla Mallet, una pequeña ínsula del Mar de Las Camp donde BLADE tenía su sede. Tras aquello, y debido a las represalias del resto de mafias con las que lidiaban, abandonaron la isla para seguir creciendo como organización y extender su fama.
     </div>
 
     <div class="slide">
-      <div class="slide-content">
-        Los años en el West Blue les valieron para ganar cierta infamia entre las mafias y un puñado de contactos en los suburbios. Aún así no rechazan ningún cliente, relacionado o no con el bajo mundo, pues buscan convertirse en el grupo armado más grande e influyente del planeta.<br><br>
-        Mientras alguien pueda pagar su precio en dinero, recursos o información, los mercenarios están dispuestos a cumplir. Sin embargo, son bastantes selectivos y no suelen asumir riesgos innecesarios que comprometan el propósito real de la organización.
-      </div>
+      Los años en el West Blue les valieron para ganar cierta infamia entre las mafias y un puñado de contactos en los suburbios. Aún así no rechazan ningún cliente, relacionado o no con el bajo mundo, pues buscan convertirse en el grupo armado más grande e influyente del planeta. Mientras alguien pueda pagar su precio en dinero, recursos o información, los mercenarios están dispuestos a cumplir. Sin embargo, son bastantes selectivos y no suelen asumir riesgos innecesarios que comprometan el propósito real de la organización.
     </div>
 
     <div class="slide">
-      <div class="slide-content">
-        Salvo con sus clientes más selectos, procuran esconder su verdadera actividad: la cacería de Akuma no Mi y sus Usuarios, a quienes llaman demonios. Lo cierto es que, pese a tener orígenes e historias muy diversas, todos los miembros de BLADE comparten la experiencia de haber sido víctimas de estos poderes alguna vez. Y esa es la causa que los une a todos, motivados por el rencor que guardan o la determinación de doblegarlos algún día.
-      </div>
+      Salvo con sus clientes más selectos, procuran esconder su verdadera actividad: la cacería de Akuma no Mi y sus Usuarios, a quienes llaman demonios. Lo cierto es que, pese a tener orígenes e historias muy diversas, todos los miembros de BLADE comparten la experiencia de haber sido víctimas de estos poderes alguna vez. Y esa es la causa que los une a todos, motivados por el rencor que guardan o la determinación de doblegarlos algún día.
     </div>
 
     <div class="slide">
-      <div class="slide-content">
-        Además de su cruzada contra los demonios, llevan en paralelo una exhaustiva investigación sobre las Akuma no Mi. Buscan y recolectan todas las frutas posibles, no sólo para incautarlas y alejarlas de manos que ellos consideran equivocadas, sino especialmente para desentrañar sus secretos y encontrar el método con el que destruirlas algún día.<br><br>
-        En pro de esta misma investigación suelen capturar algunos objetivos, con quienes experimentan después para su estudio. La mayoría terminan sin vida, otros con más suerte acaban entre las filas de los mercenarios utilizados como armas.
-      </div>
+      Además de su cruzada contra los demonios, llevan en paralelo una exhaustiva investigación sobre las Akuma no Mi. Buscan y recolectan todas las frutas posibles, no sólo para incautarlas y alejarlas de manos que ellos consideran equivocadas, sino especialmente para desentrañar sus secretos y encontrar el método con el que destruirlas algún día. En pro de esta misma investigación suelen capturar algunos objetivos, con quienes experimentan después para su estudio. La mayoría terminan sin vida, otros con más suerte acaban entre las filas de los mercenarios utilizados como armas.
     </div>
 
     <div class="slide">
-      <div class="slide-content">
-        Tienen una ética utilitarista y no dudan en valerse de cuanto esté a su alcance con tal de asegurar el éxito de sus metas, sin importar el precio a pagar ni las consecuencias. Este extremismo conlleva que no rechacen incluso el consumo de las mismas frutas.<br><br>
-        Aunque esto pudiera parecer una contradicción, la verdad es que para cualquiera de sus integrantes es un acto heroico dada la existencia de su Ley Fundamental. Esta regla, que firman con sangre al ser iniciados, dicta que cualquier mercenario consumidor de una fruta del diablo acepta ser ejecutado cuando su labor o la propia misión de BLADE concluyan. De intentar evitarlo o escapar, serán perseguidos por el resto de sus vidas hasta ser ejecutados.
-      </div>
+      Tienen una ética utilitarista y no dudan en valerse de cuanto esté a su alcance con tal de asegurar el éxito de sus metas, sin importar el precio a pagar ni las consecuencias. Este extremismo conlleva que no rechacen incluso el consumo de las mismas frutas. Aunque esto pudiera parecer una contradicción, la verdad es que para cualquiera de sus integrantes es un acto heroico dada la existencia de su Ley Fundamental. Esta regla, que firman con sangre al ser iniciados, dicta que cualquier mercenario consumidor de una fruta del diablo acepta ser ejecutado cuando su labor o la propia misión de BLADE concluyan. De intentar evitarlo o escapar, serán perseguidos por el resto de sus vidas hasta ser ejecutados.
     </div>
 
   </div>
@@ -115,15 +86,12 @@ body{
   var slides=document.getElementById('slides');
   var total=slides.children.length;
   var idx=0;
-
   function go(i){
     idx=(i+total)%total;
     slides.style.transform='translateX('+(-idx*100)+'%)';
   }
-
   document.getElementById('next').addEventListener('click',function(){go(idx+1)});
   document.getElementById('prev').addEventListener('click',function(){go(idx-1)});
-  
   go(0);
 })();
 </script>
