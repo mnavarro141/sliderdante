@@ -4,25 +4,22 @@
 <meta charset="utf-8">
 <title>Slider BLADE</title>
 <style>
-*{box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
 body{
   background:transparent;
-  margin:0;
-  padding:0;
   font-family:Verdana, Geneva, sans-serif;
-  font-size:12px;
-  color:#f8f8f8;
-  line-height:1.45;
-  text-align:center;
+  font-size:11px;
+  line-height:1.5;
+  color:#f0e9e9; /* igual que el texto del post */
+  text-align:justify;
 }
 .slider{
-  width:700px;                 /* se ajusta al ancho del bloque del post */
+  width:90%;                 /* ocupa el mismo ancho que el texto del post */
+  max-width:720px;           /* no más ancho que el bloque principal */
   margin:0 auto;
   position:relative;
   overflow:hidden;
-  display:inline-block;
-  text-align:justify;          /* igual que el texto del post */
-  padding:0 40px;              /* deja espacio interno para las flechas */
+  padding:0 36px;            /* deja espacio interno para las flechas */
 }
 .slides{
   display:flex;
@@ -30,9 +27,8 @@ body{
   will-change:transform;
 }
 .slide{
-  min-width:700px;
-  max-width:700px;
-  padding:10px 0;
+  min-width:100%;
+  padding:8px 0;
 }
 .arrow{
   position:absolute;
@@ -43,9 +39,9 @@ body{
   color:#b21919;
   text-decoration:none;
   cursor:pointer;
-  z-index:20;
   user-select:none;
-  padding:5px 12px;
+  z-index:10;
+  padding:4px 10px;
   background:transparent;
 }
 .arrow.left{left:0}
@@ -63,11 +59,11 @@ body{
     </div>
 
     <div class="slide">
-      Los años en el West Blue les valieron para ganar cierta infamia entre las mafias y un puñado de contactos en los suburbios. Aún así no rechazan ningún cliente, relacionado o no con el bajo mundo, pues buscan convertirse en el grupo armado más grande e influyente del planeta. Mientras alguien pueda pagar su precio en dinero, recursos o información, los mercenarios están dispuestos a cumplir. Sin embargo, son bastantes selectivos y no suelen asumir riesgos innecesarios que comprometan el propósito real de la organización. Salvo con sus clientes más selectos, procuran esconder su verdadera actividad: la cacería de Akuma no Mi y sus Usuarios, a quienes llaman demonios. Lo cierto es que, pese a tener orígenes e historias muy diversas, todos los miembros de BLADE comparten la experiencia de haber sido víctimas de estos poderes alguna vez. Y esa es la causa que los une a todos, motivados por el rencor que guardan o la determinación de doblegarlos algún día.
+      Los años en el West Blue les valieron para ganar cierta infamia entre las mafias y un puñado de contactos en los suburbios. Aun así no rechazan ningún cliente, relacionado o no con el bajo mundo, pues buscan convertirse en el grupo armado más grande e influyente del planeta. Mientras alguien pueda pagar su precio en dinero, recursos o información, los mercenarios están dispuestos a cumplir. Sin embargo, son bastante selectivos y no suelen asumir riesgos innecesarios que comprometan el propósito real de la organización. Salvo con sus clientes más selectos, procuran esconder su verdadera actividad: la cacería de Akuma no Mi y sus Usuarios, a quienes llaman demonios. Pese a tener orígenes e historias diversas, todos los miembros de BLADE comparten la experiencia de haber sido víctimas de estos poderes alguna vez. Esa es la causa que los une, motivados por el rencor o la determinación de doblegarlos algún día.
     </div>
 
     <div class="slide">
-      Además de su cruzada contra los demonios, llevan en paralelo una exhaustiva investigación sobre las Akuma no Mi. Buscan y recolectan todas las frutas posibles, no sólo para incautarlas y alejarlas de manos que ellos consideran equivocadas, sino especialmente para desentrañar sus secretos y encontrar el método con el que destruirlas algún día. En pro de esta misma investigación suelen capturar algunos objetivos, con quienes experimentan después para su estudio. La mayoría terminan sin vida, otros con más suerte acaban entre las filas de los mercenarios utilizados como armas. Tienen una ética utilitarista y no dudan en valerse de cuanto esté a su alcance con tal de asegurar el éxito de sus metas, sin importar el precio a pagar ni las consecuencias. Este extremismo conlleva que no rechacen incluso el consumo de las mismas frutas. Aunque esto pudiera parecer una contradicción, la verdad es que para cualquiera de sus integrantes es un acto heroico dada la existencia de su Ley Fundamental. Esta regla, que firman con sangre al ser iniciados, dicta que cualquier mercenario consumidor de una fruta del diablo acepta ser ejecutado cuando su labor o la propia misión de BLADE concluyan. De intentar evitarlo o escapar, serán perseguidos por el resto de sus vidas hasta ser ejecutados.
+      Además de su cruzada contra los demonios, llevan en paralelo una exhaustiva investigación sobre las Akuma no Mi. Buscan y recolectan todas las frutas posibles, no solo para incautarlas y alejarlas de manos que consideran equivocadas, sino también para desentrañar sus secretos y encontrar el método con el que destruirlas algún día. En pro de esta investigación suelen capturar algunos objetivos, con quienes experimentan después para su estudio. La mayoría terminan sin vida; otros, con más suerte, acaban entre las filas de los mercenarios. Tienen una ética utilitarista y no dudan en valerse de cuanto esté a su alcance con tal de asegurar el éxito de sus metas, sin importar el precio ni las consecuencias. Este extremismo conlleva que no rechacen incluso el consumo de las mismas frutas. Aunque parezca una contradicción, para ellos es un acto heroico dada su Ley Fundamental, que firman con sangre al ser iniciados: todo mercenario consumidor de una fruta del diablo acepta ser ejecutado cuando su labor o la misión de BLADE concluyan. De intentar escapar, será perseguido hasta la muerte.
     </div>
 
   </div>
