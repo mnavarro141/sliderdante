@@ -10,16 +10,16 @@ body{
   font-family:Verdana, Geneva, sans-serif;
   font-size:11px;
   line-height:1.5;
-  color:#f0e9e9; /* igual que el texto del post */
+  color:#f0e9e9;
   text-align:justify;
 }
 .slider{
-  width:90%;                 /* ocupa el mismo ancho que el texto del post */
-  max-width:720px;           /* no más ancho que el bloque principal */
+  width:90%;
+  max-width:720px;
   margin:0 auto;
   position:relative;
   overflow:hidden;
-  padding:0 36px;            /* deja espacio interno para las flechas */
+  padding:0 48px;             /* más espacio interno para las flechas */
 }
 .slides{
   display:flex;
@@ -28,20 +28,20 @@ body{
 }
 .slide{
   min-width:100%;
-  padding:8px 0;
+  padding:12px 0;
 }
 .arrow{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  font-size:38px;
+  font-size:42px;
   font-weight:bold;
   color:#b21919;
   text-decoration:none;
   cursor:pointer;
   user-select:none;
   z-index:10;
-  padding:4px 10px;
+  padding:12px 20px;          /* área de clic amplia */
   background:transparent;
 }
 .arrow.left{left:0}
