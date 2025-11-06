@@ -9,21 +9,20 @@ body{
   background:transparent;
   color:#F8F8F8;
   font-family:Verdana, Geneva, sans-serif;
-  font-size:11px;
-  line-height:1.4;
+  font-size:12px;               /* tamaño ajustado +1 punto */
+  line-height:1.45;
   margin:0;
   padding:0;
-  display:flex;
-  justify-content:center;     /* centra horizontalmente */
-  align-items:center;         /* centra verticalmente */
-  min-height:100vh;           /* asegura el centrado en todo el alto */
+  text-align:center;            /* centra el contenido respecto al post */
 }
 .slider{
   width:800px;
-  margin:auto;
+  margin:40px auto;             /* centra horizontalmente */
   position:relative;
   overflow:hidden;
   border-radius:8px;
+  display:inline-block;         /* mantiene el centrado dentro del post */
+  text-align:left;              /* pero el texto interno sigue alineado a la izquierda */
 }
 .slides{
   display:flex;
