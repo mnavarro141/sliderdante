@@ -5,42 +5,66 @@
 <title>Slider texto BLADE</title>
 <style>
 *{box-sizing:border-box}
-body{background:#1F0002; color:#fff; font-family:Arial, Helvetica, sans-serif; margin:0; padding:20px}
+body{
+  background:transparent;      /* fondo transparente */
+  color:#fff; 
+  font-family:Verdana, Geneva, sans-serif;  /* fuente Verdana */
+  font-size:10pt;              /* tamaño de texto reducido */
+  margin:0; 
+  padding:0;
+}
 .slider{
   width:800px; 
-  margin:40px auto; 
+  max-width:95%;          
+  margin:0 auto; 
   position:relative; 
   overflow:hidden; 
   border-radius:8px;
+  background:transparent;
 }
 .slides{
   display:flex; 
   transition:transform .5s ease; 
-  will-change:transform
+  will-change:transform;
 }
 .slide{
-  min-width:800px; 
-  padding:24px; 
-  height:320px; 
-  color:#fff; 
+  min-width:100%; 
+  padding:40px 24px; 
+  height:auto; 
+  color:inherit; 
   text-align:justify; 
-  position:relative
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  background:transparent;
+}
+.slide-content{
+  max-width:85%;           
+  line-height:1.6;
 }
 .arrow{
   position:absolute; 
   top:50%; 
   transform:translateY(-50%); 
-  font-size:48px;        /* flechas más grandes */
+  font-size:48px;        
   font-weight:bold; 
   color:#B21919; 
   text-decoration:none; 
   cursor:pointer; 
   z-index:20; 
   user-select:none; 
-  padding:12px 20px;     /* área de clic más cómoda */
+  padding:12px 20px;     
 }
-.arrow.left{left:12px}
-.arrow.right{right:12px}
+.arrow.left{left:-10px;}
+.arrow.right{right:-10px;}
+.arrow:hover{color:#ff3b3b;}
+
+/* Responsive */
+@media (max-width:600px){
+  body{font-size:9pt;}
+  .slide-content{max-width:95%;}
+  .arrow{font-size:36px; padding:8px 12px;}
+}
 </style>
 </head>
 <body>
@@ -48,18 +72,37 @@ body{background:#1F0002; color:#fff; font-family:Arial, Helvetica, sans-serif; m
   <div class="slides" id="slides">
 
     <div class="slide">
-      <b>Página 1:</b><br>
-      La Organización BLADE es una agrupación de mercenarios que opera en el Grand Line. Se trata de una milicia especializada en misiones por contrato: desde la intervención en conflictos bélicos hasta el espionaje o asesinato. Fue fundada en el West Blue por su líder actual, Hellgate Dante.
+      <div class="slide-content">
+        La Organización BLADE es un grupo de mercenarios que opera en el Grand Line. Se trata de una milicia especializada en misiones por contrato: desde la intervención en conflictos bélicos hasta el espionaje o asesinato. Fue fundada en el West Blue como grupo criminal al servicio de Las Cinco Familias del Oeste.<br><br>
+        Un par de años después se volvieron lo bastante fuertes y numerosos como para deshacerse del Capo que controlaba Isla Mallet, una pequeña ínsula del Mar de Las Camp donde BLADE tenía su sede. Tras aquello, y debido a las represalias del resto de mafias con las que lidiaban, abandonaron la isla para seguir creciendo como organización y extender su fama.
+      </div>
     </div>
 
     <div class="slide">
-      <b>Página 2:</b><br>
-      Un par de años después el grupo se volvió lo bastante poderoso y grande como para deshacerse del jefe mafioso que controlaba Isla Mallet, una pequeña ínsula del Mar de Las Camp donde BLADE tenía su sede. Librados de sus cadenas, adoptaron una ideología más ambiciosa y letal.
+      <div class="slide-content">
+        Los años en el West Blue les valieron para ganar cierta infamia entre las mafias y un puñado de contactos en los suburbios. Aún así no rechazan ningún cliente, relacionado o no con el bajo mundo, pues buscan convertirse en el grupo armado más grande e influyente del planeta.<br><br>
+        Mientras alguien pueda pagar su precio en dinero, recursos o información, los mercenarios están dispuestos a cumplir. Sin embargo, son bastantes selectivos y no suelen asumir riesgos innecesarios que comprometan el propósito real de la organización.
+      </div>
     </div>
 
     <div class="slide">
-      <b>Página 3:</b><br>
-      Además de su cruzada contra los demonios, llevan en paralelo una exhaustiva investigación sobre las Akuma no Mi. Por este motivo suelen capturar a algunas de las presas que cazan, con quienes experimentan posteriormente para su estudio.
+      <div class="slide-content">
+        Salvo con sus clientes más selectos, procuran esconder su verdadera actividad: la cacería de Akuma no Mi y sus Usuarios, a quienes llaman demonios. Lo cierto es que, pese a tener orígenes e historias muy diversas, todos los miembros de BLADE comparten la experiencia de haber sido víctimas de estos poderes alguna vez. Y esa es la causa que los une a todos, motivados por el rencor que guardan o la determinación de doblegarlos algún día.
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-content">
+        Además de su cruzada contra los demonios, llevan en paralelo una exhaustiva investigación sobre las Akuma no Mi. Buscan y recolectan todas las frutas posibles, no sólo para incautarlas y alejarlas de manos que ellos consideran equivocadas, sino especialmente para desentrañar sus secretos y encontrar el método con el que destruirlas algún día.<br><br>
+        En pro de esta misma investigación suelen capturar algunos objetivos, con quienes experimentan después para su estudio. La mayoría terminan sin vida, otros con más suerte acaban entre las filas de los mercenarios utilizados como armas.
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-content">
+        Tienen una ética utilitarista y no dudan en valerse de cuanto esté a su alcance con tal de asegurar el éxito de sus metas, sin importar el precio a pagar ni las consecuencias. Este extremismo conlleva que no rechacen incluso el consumo de las mismas frutas.<br><br>
+        Aunque esto pudiera parecer una contradicción, la verdad es que para cualquiera de sus integrantes es un acto heroico dada la existencia de su Ley Fundamental. Esta regla, que firman con sangre al ser iniciados, dicta que cualquier mercenario consumidor de una fruta del diablo acepta ser ejecutado cuando su labor o la propia misión de BLADE concluyan. De intentar evitarlo o escapar, serán perseguidos por el resto de sus vidas hasta ser ejecutados.
+      </div>
     </div>
 
   </div>
@@ -74,15 +117,16 @@ body{background:#1F0002; color:#fff; font-family:Arial, Helvetica, sans-serif; m
   var idx=0;
 
   function go(i){
-    idx=Math.max(0,Math.min(total-1,i));
+    idx=(i+total)%total;
     slides.style.transform='translateX('+(-idx*100)+'%)';
   }
 
-  document.getElementById('next').addEventListener('click',function(){go((idx+1)%total)});
-  document.getElementById('prev').addEventListener('click',function(){go((idx-1+total)%total)});
+  document.getElementById('next').addEventListener('click',function(){go(idx+1)});
+  document.getElementById('prev').addEventListener('click',function(){go(idx-1)});
   
   go(0);
 })();
 </script>
 </body>
 </html>
+
