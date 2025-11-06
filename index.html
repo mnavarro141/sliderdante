@@ -6,17 +6,21 @@
 <style>
 *{box-sizing:border-box}
 body{
-  background:transparent;              /* fondo completamente transparente */
-  color:#F8F8F8;                       /* blanco suave */
+  background:transparent;
+  color:#F8F8F8;
   font-family:Verdana, Geneva, sans-serif;
-  font-size:11px;                      /* tamaño ajustado al ejemplo visual */
-  line-height:1.4;                     /* espaciado de línea más compacto */
+  font-size:11px;
+  line-height:1.4;
   margin:0;
-  padding:20px;
+  padding:0;
+  display:flex;
+  justify-content:center;     /* centra horizontalmente */
+  align-items:center;         /* centra verticalmente */
+  min-height:100vh;           /* asegura el centrado en todo el alto */
 }
 .slider{
   width:800px;
-  margin:40px auto;
+  margin:auto;
   position:relative;
   overflow:hidden;
   border-radius:8px;
@@ -28,7 +32,7 @@ body{
 }
 .slide{
   min-width:800px;
-  max-width:760px;                     /* evita que el texto se extienda demasiado */
+  max-width:760px;
   margin:0 auto;
   padding:20px;
   text-align:justify;
@@ -57,23 +61,15 @@ body{
   <div class="slides" id="slides">
 
     <div class="slide">
-      La Organización BLADE es un grupo de mercenarios que opera en el Grand Line. Se trata de una milicia especializada en misiones por contrato: desde la intervención en conflictos bélicos hasta el espionaje o asesinato. Fue fundada en el West Blue como grupo criminal al servicio de Las Cinco Familias del Oeste. Un par de años después se volvieron lo bastante fuertes y numerosos como para deshacerse del Capo que controlaba Isla Mallet, una pequeña ínsula del Mar de Las Camp donde BLADE tenía su sede. Tras aquello, y debido a las represalias del resto de mafias con las que lidiaban, abandonaron la isla para seguir creciendo como organización y extender su fama.
+      La <b>Organización BLADE</b> es un grupo de mercenarios que opera en el Grand Line. Se trata de una milicia especializada en misiones por contrato: desde la intervención en conflictos bélicos hasta el espionaje o asesinato. Fue fundada en el West Blue como grupo criminal al servicio de Las Cinco Familias del Oeste. Un par de años después se volvieron lo bastante fuertes y numerosos como para deshacerse del Capo que controlaba Isla Mallet, una pequeña ínsula del Mar de Las Camp donde BLADE tenía su sede. Tras aquello, y debido a las represalias del resto de mafias con las que lidiaban, abandonaron la isla para seguir creciendo como organización y extender su fama.
     </div>
 
     <div class="slide">
-      Los años en el West Blue les valieron para ganar cierta infamia entre las mafias y un puñado de contactos en los suburbios. Aún así no rechazan ningún cliente, relacionado o no con el bajo mundo, pues buscan convertirse en el grupo armado más grande e influyente del planeta. Mientras alguien pueda pagar su precio en dinero, recursos o información, los mercenarios están dispuestos a cumplir. Sin embargo, son bastantes selectivos y no suelen asumir riesgos innecesarios que comprometan el propósito real de la organización.
+      Los años en el West Blue les valieron para ganar cierta infamia entre las mafias y un puñado de contactos en los suburbios. Aún así no rechazan ningún cliente, relacionado o no con el bajo mundo, pues buscan convertirse en el grupo armado más grande e influyente del planeta. Mientras alguien pueda pagar su precio en dinero, recursos o información, los mercenarios están dispuestos a cumplir. Sin embargo, son bastantes selectivos y no suelen asumir riesgos innecesarios que comprometan el propósito real de la organización. Salvo con sus clientes más selectos, procuran esconder su verdadera actividad: la cacería de Akuma no Mi y sus Usuarios, a quienes llaman demonios. Lo cierto es que, pese a tener orígenes e historias muy diversas, todos los miembros de BLADE comparten la experiencia de haber sido víctimas de estos poderes alguna vez. Y esa es la causa que los une a todos, motivados por el rencor que guardan o la determinación de doblegarlos algún día.
     </div>
 
     <div class="slide">
-      Salvo con sus clientes más selectos, procuran esconder su verdadera actividad: la cacería de Akuma no Mi y sus Usuarios, a quienes llaman demonios. Lo cierto es que, pese a tener orígenes e historias muy diversas, todos los miembros de BLADE comparten la experiencia de haber sido víctimas de estos poderes alguna vez. Y esa es la causa que los une a todos, motivados por el rencor que guardan o la determinación de doblegarlos algún día.
-    </div>
-
-    <div class="slide">
-      Además de su cruzada contra los demonios, llevan en paralelo una exhaustiva investigación sobre las Akuma no Mi. Buscan y recolectan todas las frutas posibles, no sólo para incautarlas y alejarlas de manos que ellos consideran equivocadas, sino especialmente para desentrañar sus secretos y encontrar el método con el que destruirlas algún día. En pro de esta misma investigación suelen capturar algunos objetivos, con quienes experimentan después para su estudio. La mayoría terminan sin vida, otros con más suerte acaban entre las filas de los mercenarios utilizados como armas.
-    </div>
-
-    <div class="slide">
-      Tienen una ética utilitarista y no dudan en valerse de cuanto esté a su alcance con tal de asegurar el éxito de sus metas, sin importar el precio a pagar ni las consecuencias. Este extremismo conlleva que no rechacen incluso el consumo de las mismas frutas. Aunque esto pudiera parecer una contradicción, la verdad es que para cualquiera de sus integrantes es un acto heroico dada la existencia de su Ley Fundamental. Esta regla, que firman con sangre al ser iniciados, dicta que cualquier mercenario consumidor de una fruta del diablo acepta ser ejecutado cuando su labor o la propia misión de BLADE concluyan. De intentar evitarlo o escapar, serán perseguidos por el resto de sus vidas hasta ser ejecutados.
+      Además de su cruzada contra los demonios, llevan en paralelo una exhaustiva investigación sobre las Akuma no Mi. Buscan y recolectan todas las frutas posibles, no sólo para incautarlas y alejarlas de manos que ellos consideran equivocadas, sino especialmente para desentrañar sus secretos y encontrar el método con el que destruirlas algún día. En pro de esta misma investigación suelen capturar algunos objetivos, con quienes experimentan después para su estudio. La mayoría terminan sin vida, otros con más suerte acaban entre las filas de los mercenarios utilizados como armas. Tienen una ética utilitarista y no dudan en valerse de cuanto esté a su alcance con tal de asegurar el éxito de sus metas, sin importar el precio a pagar ni las consecuencias. Este extremismo conlleva que no rechacen incluso el consumo de las mismas frutas. Aunque esto pudiera parecer una contradicción, la verdad es que para cualquiera de sus integrantes es un acto heroico dada la existencia de su Ley Fundamental. Esta regla, que firman con sangre al ser iniciados, dicta que cualquier mercenario consumidor de una fruta del diablo acepta ser ejecutado cuando su labor o la propia misión de BLADE concluyan. De intentar evitarlo o escapar, serán perseguidos por el resto de sus vidas hasta ser ejecutados.
     </div>
 
   </div>
