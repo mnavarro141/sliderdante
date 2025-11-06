@@ -13,40 +13,68 @@ body{
   color:#f0e9e9;
   text-align:justify;
 }
+
+/* Slider: ocupa porcentaje del contenedor del foro y se centra */
 .slider{
-  width:90%;
+  width:95%;
   max-width:720px;
   margin:0 auto;
   position:relative;
   overflow:hidden;
-  padding:0 48px;             /* más espacio interno para las flechas */
+  padding:0;                 /* sin padding aquí: lo ponemos en el contenido */
 }
+
+/* Contenedor de las slides (fila flexible) */
 .slides{
   display:flex;
-  transition:transform .5s ease;
+  transition:transform .45s ease;
   will-change:transform;
 }
+
+/* Cada slide ocupa 100% del contenedor */
 .slide{
+  flex:0 0 100%;
   min-width:100%;
-  padding:12px 0;
+  padding:18px 0;            /* separación vertical */
+  display:flex;
+  justify-content:center;    /* centra .slide-content */
 }
+
+/* BLOQUE DE TEXTO: ancho controlado (evita saltos raros) */
+.slide-content{
+  max-width:640px;           /* ancho fijo del bloque de texto */
+  width:100%;
+  padding:0 40px;            /* espacio lateral para que no lleguen las flechas */
+  text-align:justify;
+  hyphens:none;
+  overflow-wrap:break-word;
+  word-break:normal;
+}
+
+/* Flechas situadas fuera del bloque de texto (no se superponen) */
 .arrow{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  font-size:42px;
+  font-size:40px;
   font-weight:bold;
   color:#b21919;
   text-decoration:none;
   cursor:pointer;
   user-select:none;
-  z-index:10;
-  padding:12px 20px;          /* área de clic amplia */
+  z-index:20;
   background:transparent;
+  padding:6px 10px;
 }
-.arrow.left{left:0}
-.arrow.right{right:0}
-.arrow:hover{color:#ff3b3b;}
+.arrow.left{left:6px}
+.arrow.right{right:6px}
+.arrow:hover{color:#ff3b3b}
+
+/* Responsive */
+@media (max-width:640px){
+  .slide-content{max-width:92%; padding:0 18px;}
+  .arrow{font-size:32px; left:4px; right:4px;}
+}
 </style>
 </head>
 <body>
@@ -55,33 +83,43 @@ body{
   <div class="slides" id="slides">
 
     <div class="slide">
-      La <b>Organización BLADE</b> es un grupo de mercenarios que opera en el Grand Line. Se trata de una milicia especializada en misiones por contrato: desde la intervención en conflictos bélicos hasta el espionaje o asesinato. Fue fundada en el West Blue como grupo criminal al servicio de Las Cinco Familias del Oeste. Un par de años después se volvieron lo bastante fuertes y numerosos como para deshacerse del Capo que controlaba Isla Mallet, una pequeña ínsula del Mar de Las Camp donde BLADE tenía su sede. Tras aquello, y debido a las represalias del resto de mafias con las que lidiaban, abandonaron la isla para seguir creciendo como organización y extender su fama.
+      <div class="slide-content">
+        La <b>Organización BLADE</b> es un grupo de mercenarios que opera en el Grand Line. Se trata de una milicia especializada en misiones por contrato: desde la intervención en conflictos bélicos hasta el espionaje o asesinato. Fue fundada en el West Blue como grupo criminal al servicio de Las Cinco Familias del Oeste. Un par de años después se volvieron lo bastante fuertes y numerosos como para deshacerse del Capo que controlaba Isla Mallet, una pequeña ínsula del Mar de Las Camp donde BLADE tenía su sede. Tras aquello, y debido a las represalias del resto de mafias con las que lidiaban, abandonaron la isla para seguir creciendo como organización y extender su fama.
+      </div>
     </div>
 
     <div class="slide">
-      Los años en el West Blue les valieron para ganar cierta infamia entre las mafias y un puñado de contactos en los suburbios. Aun así no rechazan ningún cliente, relacionado o no con el bajo mundo, pues buscan convertirse en el grupo armado más grande e influyente del planeta. Mientras alguien pueda pagar su precio en dinero, recursos o información, los mercenarios están dispuestos a cumplir. Sin embargo, son bastante selectivos y no suelen asumir riesgos innecesarios que comprometan el propósito real de la organización. Salvo con sus clientes más selectos, procuran esconder su verdadera actividad: la cacería de Akuma no Mi y sus Usuarios, a quienes llaman demonios. Pese a tener orígenes e historias diversas, todos los miembros de BLADE comparten la experiencia de haber sido víctimas de estos poderes alguna vez. Esa es la causa que los une, motivados por el rencor o la determinación de doblegarlos algún día.
+      <div class="slide-content">
+        Los años en el West Blue les valieron para ganar cierta infamia entre las mafias y un puñado de contactos en los suburbios. Aun así no rechazan ningún cliente, relacionado o no con el bajo mundo, pues buscan convertirse en el grupo armado más grande e influyente del planeta. Mientras alguien pueda pagar su precio en dinero, recursos o información, los mercenarios están dispuestos a cumplir. Sin embargo, son bastante selectivos y no suelen asumir riesgos innecesarios que comprometan el propósito real de la organización. Salvo con sus clientes más selectos, procuran esconder su verdadera actividad: la cacería de Akuma no Mi y sus Usuarios, a quienes llaman demonios. Pese a tener orígenes e historias diversas, todos los miembros de BLADE comparten la experiencia de haber sido víctimas de estos poderes alguna vez. Esa es la causa que los une, motivados por el rencor o la determinación de doblegarlos algún día.
+      </div>
     </div>
 
     <div class="slide">
-      Además de su cruzada contra los demonios, llevan en paralelo una exhaustiva investigación sobre las Akuma no Mi. Buscan y recolectan todas las frutas posibles, no solo para incautarlas y alejarlas de manos que consideran equivocadas, sino también para desentrañar sus secretos y encontrar el método con el que destruirlas algún día. En pro de esta investigación suelen capturar algunos objetivos, con quienes experimentan después para su estudio. La mayoría terminan sin vida; otros, con más suerte, acaban entre las filas de los mercenarios. Tienen una ética utilitarista y no dudan en valerse de cuanto esté a su alcance con tal de asegurar el éxito de sus metas, sin importar el precio ni las consecuencias. Este extremismo conlleva que no rechacen incluso el consumo de las mismas frutas. Aunque parezca una contradicción, para ellos es un acto heroico dada su Ley Fundamental, que firman con sangre al ser iniciados: todo mercenario consumidor de una fruta del diablo acepta ser ejecutado cuando su labor o la misión de BLADE concluyan. De intentar escapar, será perseguido hasta la muerte.
+      <div class="slide-content">
+        Además de su cruzada contra los demonios, llevan en paralelo una exhaustiva investigación sobre las Akuma no Mi. Buscan y recolectan todas las frutas posibles, no solo para incautarlas y alejarlas de manos que consideran equivocadas, sino también para desentrañar sus secretos y encontrar el método con el que destruirlas algún día. En pro de esta investigación suelen capturar algunos objetivos, con quienes experimentan después para su estudio. La mayoría terminan sin vida; otros, con más suerte, acaban entre las filas de los mercenarios. Tienen una ética utilitarista y no dudan en valerse de cuanto esté a su alcance con tal de asegurar el éxito de sus metas, sin importar el precio ni las consecuencias. Este extremismo conlleva que no rechacen incluso el consumo de las mismas frutas. Aunque parezca una contradicción, para ellos es un acto heroico dada su Ley Fundamental, que firman con sangre al ser iniciados: todo mercenario consumidor de una fruta del diablo acepta ser ejecutado cuando su labor o la misión de BLADE concluyan. De intentar escapar, será perseguido hasta la muerte.
+      </div>
     </div>
 
   </div>
-  <a class="arrow left" id="prev">‹</a>
-  <a class="arrow right" id="next">›</a>
+
+  <a class="arrow left" id="prev" aria-label="prev">‹</a>
+  <a class="arrow right" id="next" aria-label="next">›</a>
 </div>
 
 <script>
 (function(){
-  const slides=document.getElementById('slides');
-  const total=slides.children.length;
-  let idx=0;
+  const slides = document.getElementById('slides');
+  const total = slides.children.length;
+  let idx = 0;
+
   function go(i){
-    idx=(i+total)%total;
-    slides.style.transform='translateX('+(-idx*100)+'%)';
+    idx = (i + total) % total;
+    slides.style.transform = 'translateX(' + (-idx * 100) + '%)';
   }
-  document.getElementById('next').addEventListener('click',()=>go(idx+1));
-  document.getElementById('prev').addEventListener('click',()=>go(idx-1));
+
+  document.getElementById('next').addEventListener('click', ()=> go(idx + 1));
+  document.getElementById('prev').addEventListener('click', ()=> go(idx - 1));
+
   go(0);
 })();
 </script>
