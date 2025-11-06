@@ -2,27 +2,27 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Slider texto BLADE</title>
+<title>Slider BLADE</title>
 <style>
 *{box-sizing:border-box}
 body{
   background:transparent;
-  color:#F8F8F8;
-  font-family:Verdana, Geneva, sans-serif;
-  font-size:12px;               /* tamaño ajustado +1 punto */
-  line-height:1.45;
   margin:0;
   padding:0;
-  text-align:center;            /* centra el contenido respecto al post */
+  font-family:Verdana, Geneva, sans-serif;
+  font-size:12px;
+  color:#f8f8f8;
+  line-height:1.45;
+  text-align:center;
 }
 .slider{
-  width:800px;
-  margin:40px auto;             /* centra horizontalmente */
+  width:700px;                 /* se ajusta al ancho del bloque del post */
+  margin:0 auto;
   position:relative;
   overflow:hidden;
-  border-radius:8px;
-  display:inline-block;         /* mantiene el centrado dentro del post */
-  text-align:left;              /* pero el texto interno sigue alineado a la izquierda */
+  display:inline-block;
+  text-align:justify;          /* igual que el texto del post */
+  padding:0 40px;              /* deja espacio interno para las flechas */
 }
 .slides{
   display:flex;
@@ -30,32 +30,31 @@ body{
   will-change:transform;
 }
 .slide{
-  min-width:800px;
-  max-width:760px;
-  margin:0 auto;
-  padding:20px;
-  text-align:justify;
-  height:auto;
-  position:relative;
+  min-width:700px;
+  max-width:700px;
+  padding:10px 0;
 }
 .arrow{
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  font-size:48px;
+  font-size:38px;
   font-weight:bold;
-  color:#B21919;
+  color:#b21919;
   text-decoration:none;
   cursor:pointer;
   z-index:20;
   user-select:none;
-  padding:12px 20px;
+  padding:5px 12px;
+  background:transparent;
 }
-.arrow.left{left:12px}
-.arrow.right{right:12px}
+.arrow.left{left:0}
+.arrow.right{right:0}
+.arrow:hover{color:#ff3b3b;}
 </style>
 </head>
 <body>
+
 <div class="slider" id="slider">
   <div class="slides" id="slides">
 
@@ -72,21 +71,21 @@ body{
     </div>
 
   </div>
-  <a class="arrow left" id="prev" aria-label="prev">‹</a>
-  <a class="arrow right" id="next" aria-label="next">›</a>
+  <a class="arrow left" id="prev">‹</a>
+  <a class="arrow right" id="next">›</a>
 </div>
 
 <script>
 (function(){
-  var slides=document.getElementById('slides');
-  var total=slides.children.length;
-  var idx=0;
+  const slides=document.getElementById('slides');
+  const total=slides.children.length;
+  let idx=0;
   function go(i){
     idx=(i+total)%total;
     slides.style.transform='translateX('+(-idx*100)+'%)';
   }
-  document.getElementById('next').addEventListener('click',function(){go(idx+1)});
-  document.getElementById('prev').addEventListener('click',function(){go(idx-1)});
+  document.getElementById('next').addEventListener('click',()=>go(idx+1));
+  document.getElementById('prev').addEventListener('click',()=>go(idx-1));
   go(0);
 })();
 </script>
